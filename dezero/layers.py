@@ -51,10 +51,10 @@ class Linear(Layer):
 
         if nobias:
             self.b = None
-        
+
         else:
             self.b = Parameter(np.zeros(out_size, dtype=dtype), name='b')
-        
+
     def _init_W(self):
         I, O = self.in_size, self.out_size
         W_data = np.random.rand(I, O).astype(self.dtype) * np.sqrt(1 / I)
